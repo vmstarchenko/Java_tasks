@@ -18,13 +18,7 @@ public class Img2Ascii {
     private PrintWriter prntwrt;
     private FileWriter filewrt;
 
-    public Img2Ascii() {
-        try {
-            prntwrt = new PrintWriter(filewrt = new FileWriter("asciiart.txt",
-                    true));
-        } catch (IOException ex) {
-        }
-    }
+
 
     public static void resize(String inputImagePath,
             String outputImagePath, int scaledWidth, int scaledHeight)
