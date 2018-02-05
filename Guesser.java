@@ -11,7 +11,7 @@ import java.lang.Math;
 
 import javax.imageio.ImageIO;
 
-public class Img2Ascii {
+public class Guesser {
     private BufferedImage num;
     private BufferedImage img;
     private double pixval;
@@ -45,7 +45,7 @@ public class Img2Ascii {
     }
 
 
-    public void convertToAscii(String imgname) {
+    public void guess(String imgname) {
         try {
             img = ImageIO.read(new File(imgname));
         } catch (IOException e) {
@@ -148,7 +148,7 @@ public class Img2Ascii {
 
 
     public static void main(String[] args) {
-        Img2Ascii obj = new Img2Ascii();
+        Guesser obj = new Guesser();
         /*
         try{
           Img2Ascii.resize(args[0], "qwe.png", 100,100);
@@ -156,6 +156,6 @@ public class Img2Ascii {
             System.out.println("Error resizing the image.");
             ex.printStackTrace();
         }*/
-        obj.convertToAscii(args[0]);
+        obj.guess(args[0]);
     }
 }
